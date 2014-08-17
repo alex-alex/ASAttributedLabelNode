@@ -42,8 +42,8 @@
 		FA2BBFCC19A11B8C004BD7E7 = {
 			isa = PBXGroup;
 			children = (
-				FA2BBFD719A11B8C004BD7E7 /* ASAttributedLabelNode-Demo */,
 				FA2BBFFC19A11BBC004BD7E7 /* ASAttributedLabelNode */,
+				FA2BBFD719A11B8C004BD7E7 /* ASAttributedLabelNode-Demo */,
 				FA2BBFFB19A11BAC004BD7E7 /* Resources */,
 				FA2BBFD819A11B8C004BD7E7 /* Supporting Files */,
 				FA2BBFD619A11B8C004BD7E7 /* Products */,
@@ -305,6 +305,7 @@
 				FA2BBFF719A11B8C004BD7E7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
