@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>7AE84E03-0EBA-4824-9FFD-9325619E4A11</string>
+	<key>IDESourceControlProjectName</key>
+	<string>ASAttributedLabelNode-Demo</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>E12D460490758EE49F6C0D835D87F9009C87B7AA</key>
+		<string>https://github.com/alex-alex/ASAttributedLabelNode.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>ASAttributedLabelNode-Demo/ASAttributedLabelNode-Demo.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>E12D460490758EE49F6C0D835D87F9009C87B7AA</key>
+		<string>../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/alex-alex/ASAttributedLabelNode.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>E12D460490758EE49F6C0D835D87F9009C87B7AA</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>E12D460490758EE49F6C0D835D87F9009C87B7AA</string>
+			<key>IDESourceControlWCCName</key>
+			<string>ASAttributedLabelNode</string>
+		</dict>
+	</array>
+</dict>
+</plist>
