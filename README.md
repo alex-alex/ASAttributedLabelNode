@@ -1,7 +1,7 @@
 ASAttributedLabelNode
 =====================
 
-Draw NSAttributedString in SpriteKit. Compatible only with iOS.
+Draw NSAttributedString in SpriteKit. Currently compatible only with iOS.
 
 Screenshot
 ----------
