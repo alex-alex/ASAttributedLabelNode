@@ -10,7 +10,7 @@ import SpriteKit
 
 class ASAttributedLabelNode: SKSpriteNode {
 	
-	required init(coder aDecoder: NSCoder!) { super.init(coder: aDecoder) }
+	required init?(coder aDecoder: NSCoder) { super.init(coder: aDecoder) }
 	
 	init(size: CGSize) {
 		super.init(texture: nil, color: nil, size: size)
@@ -25,7 +25,7 @@ class ASAttributedLabelNode: SKSpriteNode {
 		if let attrStr = attributedString {
 			let scaleFactor = UIScreen.mainScreen().scale
 			let colorSpace = CGColorSpaceCreateDeviceRGB()
-			let bitmapInfo = CGBitmapInfo.fromRaw(CGImageAlphaInfo.PremultipliedLast.toRaw())!
+			let bitmapInfo = CGBitmapInfo(CGImageAlphaInfo.PremultipliedLast.rawValue)
 			let oContext = CGBitmapContextCreate(nil, UInt(self.size.width * scaleFactor), UInt(self.size.height * scaleFactor), 8, UInt(self.size.width * scaleFactor * 4), colorSpace, bitmapInfo)
 			if let context = oContext {
 				CGContextScaleCTM(context, scaleFactor, scaleFactor)
@@ -45,5 +45,5 @@ class ASAttributedLabelNode: SKSpriteNode {
 		}
 		
 	}
-   
+	
 }
