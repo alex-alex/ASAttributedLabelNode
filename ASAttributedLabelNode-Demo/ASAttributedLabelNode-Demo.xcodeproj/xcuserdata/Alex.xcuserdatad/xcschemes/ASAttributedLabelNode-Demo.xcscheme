@@ -20,6 +20,20 @@
                ReferencedContainer = "container:ASAttributedLabelNode-Demo.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "NO"
+            buildForArchiving = "NO"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "FA053F891A5A844300D2A9B4"
+               BuildableName = "ASAttributedLabelNode-Demo-Tests.xctest"
+               BlueprintName = "ASAttributedLabelNode-Demo-Tests"
+               ReferencedContainer = "container:ASAttributedLabelNode-Demo.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
       </BuildActionEntries>
    </BuildAction>
    <TestAction
@@ -28,6 +42,16 @@
       shouldUseLaunchSchemeArgsEnv = "YES"
       buildConfiguration = "Debug">
       <Testables>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "FA053F891A5A844300D2A9B4"
+               BuildableName = "ASAttributedLabelNode-Demo-Tests.xctest"
+               BlueprintName = "ASAttributedLabelNode-Demo-Tests"
+               ReferencedContainer = "container:ASAttributedLabelNode-Demo.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference
