@@ -1,0 +1,3 @@
+language: objective-c
+xcode_project: ASAttributedLabelNode-Demo/ASAttributedLabelNode-Demo.xcodeproj
+xcode_scheme: ASAttributedLabelNode-Demo
