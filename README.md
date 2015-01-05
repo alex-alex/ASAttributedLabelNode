@@ -3,6 +3,8 @@ ASAttributedLabelNode
 
 Draw NSAttributedString in SpriteKit. Currently compatible only with iOS.
 
+[![Build Status](https://travis-ci.org/alex-alex/ASAttributedLabelNode.svg?branch=master)](https://travis-ci.org/alex-alex/ASAttributedLabelNode)
+
 Screenshot
 ----------
 
