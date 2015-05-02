@@ -15,7 +15,7 @@ class GameScene: SKScene {
 		
 		let demoURL = NSBundle.mainBundle().URLForResource("demo", withExtension: "rtf")
 		let attrStr = NSAttributedString(fileURL: demoURL, options: [NSDocumentTypeDocumentAttribute: NSRTFTextDocumentType], documentAttributes: nil, error: nil)
-		
+
 		let myLabel = ASAttributedLabelNode(size: self.size)
 		myLabel.attributedString = attrStr
 		myLabel.position = CGPoint(x:CGRectGetMidX(self.frame), y:CGRectGetMidY(self.frame));
