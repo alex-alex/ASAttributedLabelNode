@@ -26,7 +26,7 @@ class ASAttributedLabelNode: SKSpriteNode {
 			let scaleFactor = UIScreen.mainScreen().scale
 			let colorSpace = CGColorSpaceCreateDeviceRGB()
 			let bitmapInfo = CGBitmapInfo(CGImageAlphaInfo.PremultipliedLast.rawValue)
-			let oContext = CGBitmapContextCreate(nil, Int(self.size.width * scaleFactor), Int(self.size.height * scaleFactor), 8, Int(self.size.width * scaleFactor * 4), colorSpace, bitmapInfo)
+			let oContext = CGBitmapContextCreate(nil, Int(self.size.width * scaleFactor), Int(self.size.height * scaleFactor), 8, Int(self.size.width * scaleFactor) * 4, colorSpace, bitmapInfo)
 			if let context = oContext {
 				CGContextScaleCTM(context, scaleFactor, scaleFactor)
 				CGContextConcatCTM(context, CGAffineTransformMake(1, 0, 0, -1, 0, self.size.height));
