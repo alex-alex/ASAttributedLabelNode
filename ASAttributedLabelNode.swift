@@ -13,19 +13,20 @@ class ASAttributedLabelNode: SKSpriteNode {
 	required init?(coder aDecoder: NSCoder) { super.init(coder: aDecoder) }
 	
 	init(size: CGSize) {
-		super.init(texture: nil, color: nil, size: size)
+		super.init(texture: nil, color: UIColor.clearColor(), size: size)
 	}
 	
 	var attributedString: NSAttributedString! {
-		didSet { draw() }
+		didSet {
+			draw()
+		}
 	}
 	
 	func draw() {
-		
 		if let attrStr = attributedString {
 			let scaleFactor = UIScreen.mainScreen().scale
 			let colorSpace = CGColorSpaceCreateDeviceRGB()
-			let bitmapInfo = CGBitmapInfo(CGImageAlphaInfo.PremultipliedLast.rawValue)
+			let bitmapInfo = CGImageAlphaInfo.PremultipliedLast.rawValue
 			let oContext = CGBitmapContextCreate(nil, Int(self.size.width * scaleFactor), Int(self.size.height * scaleFactor), 8, Int(self.size.width * scaleFactor) * 4, colorSpace, bitmapInfo)
 			if let context = oContext {
 				CGContextScaleCTM(context, scaleFactor, scaleFactor)
@@ -36,14 +37,17 @@ class ASAttributedLabelNode: SKSpriteNode {
 				let yOffset = (self.size.height - strHeight) / 2.0
 				attrStr.drawWithRect(CGRect(x: 0, y: yOffset, width: self.size.width, height: strHeight), options: .UsesLineFragmentOrigin, context: nil)
 				
-				let imageRef = CGBitmapContextCreateImage(context)
+				if let imageRef = CGBitmapContextCreateImage(context) {
+					self.texture = SKTexture(CGImage: imageRef)
+				} else {
+					self.texture = nil
+				}
+				
 				UIGraphicsPopContext()
-				self.texture = SKTexture(CGImage: imageRef)
 			}
 		} else {
 			self.texture = nil
 		}
-		
 	}
 	
 }

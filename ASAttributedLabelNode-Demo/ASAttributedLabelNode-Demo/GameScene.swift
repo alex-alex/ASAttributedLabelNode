@@ -13,8 +13,8 @@ class GameScene: SKScene {
     override func didMoveToView(view: SKView) {
         /* Setup your scene here */
 		
-		let demoURL = NSBundle.mainBundle().URLForResource("demo", withExtension: "rtf")
-		let attrStr = NSAttributedString(fileURL: demoURL, options: [NSDocumentTypeDocumentAttribute: NSRTFTextDocumentType], documentAttributes: nil, error: nil)
+		let demoURL = NSBundle.mainBundle().URLForResource("demo", withExtension: "rtf")!
+		let attrStr = try? NSAttributedString(fileURL: demoURL, options: [NSDocumentTypeDocumentAttribute: NSRTFTextDocumentType], documentAttributes: nil)
 
 		let myLabel = ASAttributedLabelNode(size: self.size)
 		myLabel.attributedString = attrStr
