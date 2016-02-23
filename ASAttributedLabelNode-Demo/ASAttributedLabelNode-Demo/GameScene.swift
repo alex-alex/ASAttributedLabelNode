@@ -11,15 +11,16 @@ import SpriteKit
 class GameScene: SKScene {
 	
     override func didMoveToView(view: SKView) {
-        /* Setup your scene here */
 		
-		let demoURL = NSBundle.mainBundle().URLForResource("demo", withExtension: "rtf")!
-		let attrStr = try? NSAttributedString(fileURL: demoURL, options: [NSDocumentTypeDocumentAttribute: NSRTFTextDocumentType], documentAttributes: nil)
+		guard let demoURL = NSBundle.mainBundle().URLForResource("demo", withExtension: "rtf"),
+			attrStr = try? NSAttributedString(fileURL: demoURL, options: [NSDocumentTypeDocumentAttribute: NSRTFTextDocumentType], documentAttributes: nil) else {
+			return
+		}
 
-		let myLabel = ASAttributedLabelNode(size: self.size)
+		let myLabel = ASAttributedLabelNode(size: size)
 		myLabel.attributedString = attrStr
-		myLabel.position = CGPoint(x:CGRectGetMidX(self.frame), y:CGRectGetMidY(self.frame));
-		self.addChild(myLabel)
+		myLabel.position = CGPoint(x: frame.midX, y: frame.midY)
+		addChild(myLabel)
 		
     }
 
