@@ -10,10 +10,10 @@ import SpriteKit
 
 class GameScene: SKScene {
 	
-    override func didMoveToView(view: SKView) {
+    override func didMove(to view: SKView) {
 		
-		guard let demoURL = NSBundle.mainBundle().URLForResource("demo", withExtension: "rtf"),
-			attrStr = try? NSAttributedString(fileURL: demoURL, options: [NSDocumentTypeDocumentAttribute: NSRTFTextDocumentType], documentAttributes: nil) else {
+		guard let demoURL = Bundle.main.url(forResource: "demo", withExtension: "rtf"),
+			let attrStr = try? NSAttributedString(fileURL: demoURL, options: [NSDocumentTypeDocumentAttribute: NSRTFTextDocumentType], documentAttributes: nil) else {
 			return
 		}
 
