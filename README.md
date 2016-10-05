@@ -20,7 +20,7 @@ scene.addChild(myLabel)
 Screenshot
 ----------
 
-![Screenshot](https://raw.githubusercontent.com/alex-alex/ASAttributedLabelNode/master/Screenshot.png)
+![Screenshot](https://cloud.githubusercontent.com/assets/1085707/19052726/ead94478-8985-11e6-8aac-c6aff1c4243a.png)
 
 License
 -------
