@@ -15,7 +15,7 @@ class ASAttributedLabelNode: SKSpriteNode {
 	}
 	
 	init(size: CGSize) {
-		super.init(texture: nil, color: .clearColor(), size: size)
+		super.init(texture: nil, color: UIColor.clear, size: size)
 	}
 	
 	var attributedString: NSAttributedString! {
@@ -30,23 +30,23 @@ class ASAttributedLabelNode: SKSpriteNode {
 			return
 		}
 		
-		let scaleFactor = UIScreen.mainScreen().scale
+		let scaleFactor = UIScreen.main.scale
 		let colorSpace = CGColorSpaceCreateDeviceRGB()
-		let bitmapInfo = CGImageAlphaInfo.PremultipliedLast.rawValue
-		guard let context = CGBitmapContextCreate(nil, Int(size.width * scaleFactor), Int(size.height * scaleFactor), 8, Int(size.width * scaleFactor) * 4, colorSpace, bitmapInfo) else {
+		let bitmapInfo = CGImageAlphaInfo.premultipliedLast.rawValue
+		guard let context = CGContext(data: nil, width: Int(size.width * scaleFactor), height: Int(size.height * scaleFactor), bitsPerComponent: 8, bytesPerRow: Int(size.width * scaleFactor) * 4, space: colorSpace, bitmapInfo: bitmapInfo) else {
 			return
 		}
 
-		CGContextScaleCTM(context, scaleFactor, scaleFactor)
-		CGContextConcatCTM(context, CGAffineTransform(a: 1, b: 0, c: 0, d: -1, tx: 0, ty: size.height))
+		context.scaleBy(x: scaleFactor, y: scaleFactor)
+		context.concatenate(CGAffineTransform(a: 1, b: 0, c: 0, d: -1, tx: 0, ty: size.height))
 		UIGraphicsPushContext(context)
 		
-		let strHeight = attrStr.boundingRectWithSize(size, options: .UsesLineFragmentOrigin, context: nil).height
+		let strHeight = attrStr.boundingRect(with: size, options: .usesLineFragmentOrigin, context: nil).height
 		let yOffset = (size.height - strHeight) / 2.0
-		attrStr.drawWithRect(CGRect(x: 0, y: yOffset, width: size.width, height: strHeight), options: .UsesLineFragmentOrigin, context: nil)
+		attrStr.draw(with: CGRect(x: 0, y: yOffset, width: size.width, height: strHeight), options: .usesLineFragmentOrigin, context: nil)
 		
-		if let imageRef = CGBitmapContextCreateImage(context) {
-			texture = SKTexture(CGImage: imageRef)
+		if let imageRef = context.makeImage() {
+			texture = SKTexture(cgImage: imageRef)
 		} else {
 			texture = nil
 		}
