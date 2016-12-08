@@ -33,7 +33,7 @@
     float scaleFactor = [UIScreen mainScreen].scale;
     CGColorSpaceRef colorSpace = CGColorSpaceCreateDeviceRGB();
     CGImageAlphaInfo bitmapInfo = kCGImageAlphaPremultipliedLast;
-    CGContextRef context = CGBitmapContextCreate(nil, self.size.width * scaleFactor, self.size.height * scaleFactor, 8, (self.size.width * scaleFactor) * 4, colorSpace, bitmapInfo);
+    CGContextRef context = CGBitmapContextCreate(nil, self.size.width * scaleFactor, self.size.height * scaleFactor, 8, 0, colorSpace, bitmapInfo);
     
     if (context == nil) {
         return;
